@@ -206,6 +206,31 @@ p {
     padding: 1%;
 }
 
+/* styles for Searchbar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar label {
+    margin-right: 10px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* below are the styles for the footer */
 footer {
     background-color:#AC92A6;
