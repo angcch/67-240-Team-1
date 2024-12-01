@@ -57,48 +57,47 @@
                     </div>
                     <div class="col-md-4">
                         <div class="calendar-container">
-                            <input type="date" id="start-date">
-                            <input type="date" id="end-date">
+                            <input type="date" id="filter-date">
                             <button id="filter-button">Filter Events</button>
-                        
+
                             <div id="calendar"></div>
                             <div id="event-list"></div>
-                        </div>
+                        </div>          
+
                         <script>
                             const events = [
-                            { title: "Event 1", start: "2023-11-20", end: "2023-11-22" },
+                              { title: "Event 1", start: "2023-11-20", end: "2023-11-22" },
                             ];
-                        
-                            document.addEventListener('DOMContentLoaded', function() {
-                              var calendarEl = document.getElementById('calendar');
-                        
-                              var calendar = new FullCalendar.Calendar(calendarEl, {
+                    
+                            document.addEventListener('DOMContentLoaded', () => {
+                              const calendarEl = document.getElementById('calendar');
+                    
+                              const calendar = new FullCalendar.Calendar(calendarEl, {
                                 initialView: 'dayGridMonth',
                                 events: events
                               });
-                        
+                    
                               calendar.render();
-                        
+                    
                               const filterButton = document.getElementById("filter-button");
-                              filterButton.addEventListener("click", function() {
-                                const startDate = document.getElementById("start-date").value;
-                                const endDate = document.getElementById("end-date").value;
-                        
+                              filterButton.addEventListener('click', () => {
+                                const filterDate = document.getElementById("filter-date").value;
+                    
                                 const filteredEvents = events.filter(event => {
-                                  return moment(event.start).isBetween(startDate, endDate, 'day', '[]') && moment(event.end).isBetween(startDate, endDate, 'day', '[]');
+                                  return moment(event.start).isSameOrAfter(filterDate, 'day') && moment(event.end).isSameOrBefore(filterDate, 'day');
                                 });
-                        
+                    
                                 const eventList = document.getElementById("event-list");
-                                eventList.innerHTML = ""; // Clear previous events
-                        
+                                eventList.innerHTML = ''; // Clear previous events
+                    
                                 filteredEvents.forEach(event => {
-                                  const eventItem = document.createElement("div");
+                                  const eventItem = document.createElement('div');
                                   eventItem.textContent = event.title;
                                   eventList.appendChild(eventItem);
                                 });
                               });
                             });
-                        </script>                      
+                        </script>                       
                     </div>
                     <div class="col-md-4">
                         <div class="search-bar">
