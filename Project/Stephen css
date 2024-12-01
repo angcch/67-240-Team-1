@@ -1,0 +1,145 @@
+body {
+    padding-top: 5%;
+}
+
+/* below are the styles for the nav bar */
+nav {
+    background-color: #AC92A6;
+    color: white;
+    margin: 0;
+    padding: 2%;
+}
+
+.navbar-brand, .nav-link {
+    color: white;
+}
+
+.navbar-nav {
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.nav-item {
+    width: 20%;
+    text-align: center; 
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+button {
+    background-color: #AC92A6;
+    border: #AC92A6;
+    color: white;
+    margin: 2%;
+}
+
+/* below are the styles for the footer */
+footer {
+    background-color:#AC92A6;
+    padding: 1%;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: white;
+}
+
+.contact {
+    text-decoration: none;
+    color: white;
+}
+
+.back-to-top:hover, .contact:hover {
+    color: black;
+}
+
+/* below are the publication styles */
+.event_filter {
+    text-align: center;
+    border: 1.5px solid #000;
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+.event {
+    border: 1.5px solid #000;
+    padding: 2%;
+    margin-bottom: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.event img {
+    width: 100%;
+    height: 77%;
+    border: 1px solid #000; 
+}
+
+.event_date {
+    border: 1px solid #000;
+    padding: 2%;
+    margin-top: 2%;
+    height: 21%;
+    text-align: center;
+}
+
+.event_title {
+    border: 1px solid #000; 
+    padding: 1%;
+    height: 15%;
+}
+
+.event_description {
+    border: 1px solid #000;
+    padding: 1%;
+    height: 83%;
+    overflow: auto;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #AC92A6;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #776472;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
